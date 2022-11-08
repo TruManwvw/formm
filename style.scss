@@ -1,0 +1,183 @@
+@import 'null.scss';
+@import 'fonts.scss';
+
+.__container {
+	max-width: 1460px;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+.wrapper {
+	padding: 30px 0;
+}
+//С этого момент можно вставлять
+.form-address {
+	display: flex;
+	justify-content: space-between;
+}
+.form-address__map {
+	width: 100%;
+	max-height: 100%;
+}
+.form-address__main {
+	flex: 0 0 580px;
+	max-width: 580px;
+	margin: 0 0 0 36px;
+}
+.main__info {
+	color: #343434;
+	font-family: "AvenirNextCry-Regular";
+	font-size: 1.29rem;
+	margin: 0 0 40px 0;
+}
+.main__info >div {
+	margin: 0 0 25px 0;
+}
+.main__info >div:last-child {
+	margin: 0;
+}
+.main__info a{
+	color: #343434;
+}
+.info__tel a {
+	font-size: 1.86rem;
+
+}
+.info__tel span {
+	font-family: "Avenirnextcyr-demi";
+	font-size: 2.71rem;
+}
+.info__address {
+
+}
+.info__email {}
+.main__form {}
+
+.form {
+	width: 100%;
+	background: #F7F7FA;
+	padding: 40px;
+	position: relative;
+}
+.form__feedback:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background: rgba(247, 247, 250, 0.7) url('./sending.gif') center/ 50px no-repeat;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease 0s;
+}
+.form__feedback._sending:before {
+	opacity: 1;
+	visibility: visible;
+}
+.form__feedback {
+	width: 100%;
+	height: 100%;
+}
+.form__feedback >div {
+	margin: 0 0 24px 0;
+}
+.form__name {
+	font-family: "Avenirnextcyr-bold";
+	font-size: 1.71rem;
+	line-height: 1.21em;
+	color: #343434;
+	margin: 0 0 40px 0;
+}
+.form__item {
+	width: 100%;
+}
+.form__input {
+	width: 100%;
+	border: none;
+	padding: 22px 24px;
+	font-family: "AvenirNextCry-Regular";
+	font-size: 1.14rem;
+}
+.form__input:focus {
+	outline: solid 2px rgba(0,0,0, 0.4);
+}
+.form__input._error {
+	-webkit-box-shadow: 0px 0px 7px 2px rgba(255, 0, 0, 0.2);
+	-moz-box-shadow: 0px 0px 7px 2px rgba(255, 0, 0, 0.2);
+	box-shadow: 0px 0px 7px 2px rgba(255, 0, 0, 0.2);
+}
+.form__item textarea.form__input {
+	resize: vertical;
+	min-height: 150px;
+	line-height: 1.25em;
+}
+.checkbox {
+}
+.checkbox._error .checkbox__label::before{
+	-webkit-box-shadow: 0px 0px 7px 2px rgba(255, 0, 0, 0.2);
+	-moz-box-shadow: 0px 0px 7px 2px rgba(255, 0, 0, 0.2);
+	box-shadow: 0px 0px 7px 2px rgba(255, 0, 0, 0.2);
+}
+.checkbox__input {
+	display: none;
+}
+.checkbox__label {
+	width: 100%;
+	font-family: "AvenirNextCry-Regular";
+	font-size: 1rem;
+	line-height: 1.21em;
+	color: #616A79;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+}
+.checkbox__label::before {
+	align-self: flex-start;
+	content: '';
+	flex: 0 0 25px;
+	height: 25px;
+	background: #fff;
+	margin: 0 10px 0 0;
+}
+.checkbox__label::after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	transition: all 0.1s ease 0s;
+	align-self: flex-start;
+	content: '';
+	width: 25px;
+	height: 25px;
+	background: url('./checkbox.svg') 50% 50% no-repeat, #393186;
+	margin: 0 10px 0 0;
+	transform: scale(0);
+}
+.checkbox__input:checked + .checkbox__label::after {
+	transform: scale(1);
+}
+.form__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 65px;
+	background: #E31E25;
+	color: #fff;
+	cursor: pointer;
+	font-family: "EuclidCircularB-Medium";
+	font-size: 1.43rem;
+}
+
+
+
+
+
+
+
+
+
+
+

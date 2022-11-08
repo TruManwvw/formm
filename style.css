@@ -1,0 +1,312 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "AvenirNextCry-Regular";
+  src: url("./fonts/AvenirNextCry-Regular.woff"), url("./fonts/AvenirNextCry-Regular.woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenirnextcyr-bold";
+  src: url("./fonts/avenirnextcyr-bold.woff"), url("./fonts/avenirnextcyr-bold.woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenirnextcyr-demi";
+  src: url("./fonts/avenirnextcyr-demi.woff"), url("./fonts/avenirnextcyr-demi.woff2");
+  font-weight: auto;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "EuclidCircularB-Medium";
+  src: url("./fonts/EuclidCircularB-Medium.woff"), url("./fonts/EuclidCircularB-Medium.woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+.__container {
+  max-width: 1460px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding: 30px 0;
+}
+
+.form-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-address__map {
+  width: 100%;
+  max-height: 100%;
+}
+
+.form-address__main {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 580px;
+          flex: 0 0 580px;
+  max-width: 580px;
+  margin: 0 0 0 36px;
+}
+
+.main__info {
+  color: #343434;
+  font-family: "AvenirNextCry-Regular";
+  font-size: 1.29rem;
+  margin: 0 0 40px 0;
+}
+
+.main__info > div {
+  margin: 0 0 25px 0;
+}
+
+.main__info > div:last-child {
+  margin: 0;
+}
+
+.main__info a {
+  color: #343434;
+}
+
+.info__tel a {
+  font-size: 1.86rem;
+}
+
+.info__tel span {
+  font-family: "Avenirnextcyr-demi";
+  font-size: 2.71rem;
+}
+
+.form {
+  width: 100%;
+  background: #F7F7FA;
+  padding: 40px;
+  position: relative;
+}
+
+.form__feedback:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgba(247, 247, 250, 0.7) url("./sending.gif") center/50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.form__feedback._sending:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form__feedback {
+  width: 100%;
+  height: 100%;
+}
+
+.form__feedback > div {
+  margin: 0 0 24px 0;
+}
+
+.form__name {
+  font-family: "Avenirnextcyr-bold";
+  font-size: 1.71rem;
+  line-height: 1.21em;
+  color: #343434;
+  margin: 0 0 40px 0;
+}
+
+.form__item {
+  width: 100%;
+}
+
+.form__input {
+  width: 100%;
+  border: none;
+  padding: 22px 24px;
+  font-family: "AvenirNextCry-Regular";
+  font-size: 1.14rem;
+}
+
+.form__input:focus {
+  outline: solid 2px rgba(0, 0, 0, 0.4);
+}
+
+.form__input._error {
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(255, 0, 0, 0.2);
+  box-shadow: 0px 0px 7px 2px rgba(255, 0, 0, 0.2);
+}
+
+.form__item textarea.form__input {
+  resize: vertical;
+  min-height: 150px;
+  line-height: 1.25em;
+}
+
+.checkbox._error .checkbox__label::before {
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(255, 0, 0, 0.2);
+  box-shadow: 0px 0px 7px 2px rgba(255, 0, 0, 0.2);
+}
+
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__label {
+  width: 100%;
+  font-family: "AvenirNextCry-Regular";
+  font-size: 1rem;
+  line-height: 1.21em;
+  color: #616A79;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox__label::before {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  content: "";
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25px;
+          flex: 0 0 25px;
+  height: 25px;
+  background: #fff;
+  margin: 0 10px 0 0;
+}
+
+.checkbox__label::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  -webkit-transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: url("./checkbox.svg") 50% 50% no-repeat, #393186;
+  margin: 0 10px 0 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.form__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 65px;
+  background: #E31E25;
+  color: #fff;
+  cursor: pointer;
+  font-family: "EuclidCircularB-Medium";
+  font-size: 1.43rem;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="__container">
+
+			<!-- С этого момент можно вставлять -->
+			<div class="form-address">
+				<div class="form-address__map">
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afa0b00cc9c2eadc36c6f0f5f9a581da43d6e654a27bd6017004c2d8cb159bc39&amp;width=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
+				</div>
+				<div class="form-address__main">
+					<div class="main__info">
+						<div class="info__tel"><a href="tel:+74959707146">+7 (495) <span>970-71-46</span></a></div>
+						<div class="info__address">115432, Москва, Проектируемый проезд № 4062, д.6, стр. 16</div>
+						<div class="info__email"><a href="mailto:info@aexpertiz.ru">info@aexpertiz.ru</a></div>
+					</div>
+					<div class="main__form">
+						<div class="form">
+							<form id='form' action="#" class="form__feedback">
+								<h1 class="form__name">ОБРАТНАЯ СВЯЗЬ</h1>
+
+								<!-- Username -->
+								<div class="form__item">
+									<input type="text" name="name" class="form__input _req" placeholder="Ваше имя">
+								</div>
+
+								<!-- Telephone -->
+								<div class="form__item">
+									<input type="tel" name="tel" class="form__input _req" placeholder="Телефон :" data-tel-input>
+								</div>
+
+								<!-- Message -->
+								<div class="form__item">
+									<textarea name="message" class="form__input" placeholder="Задать вопрос"></textarea>
+							    </div>
+
+								<!-- Approval -->
+							    <div class="form__item">
+									<div class="checkbox">
+										<input type="checkbox" id="formAgreement" name="agreement" class="checkbox__input _req">
+										<label for="formAgreement" class="checkbox__label">Согласен(а) на обработку персональных данных</label>
+									</div>
+								</div>
+
+								<!-- Submit the form -->
+								<button type="submit" class="form__button">Отправить</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- . -->
+
+		</div>
+	</div>
+	<script src="./script.js"></script>
+</body>
+</html>
